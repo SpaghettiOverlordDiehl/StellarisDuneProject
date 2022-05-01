@@ -1,0 +1,22 @@
+#Test
+
+origin_dune_fremen = { #Start off as a Ranodm Sietch -Note Make Fremen Name List
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origins_elder_race.dds"
+
+}
+
+origin_dune_sietch_tabr_fremen = { #Start off with a custom made Sietch, Custom Leaders and Leaders
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origins_elder_race.dds"
+}
+
+origin_dune_house_atredies = { # Start off on Caladan, Leto the First as your Leader
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origins_elder_race.dds"
+}
+
+origin_dune_house_harkonnen = { #Start off with Geldi Prime as Homeworld, Arrakis as secondary world
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origins_elder_race.dds"
+}

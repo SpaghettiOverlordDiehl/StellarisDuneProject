@@ -1,0 +1,66 @@
+@distance = 50
+@base_moon_distance =10
+@jumps = 3
+
+####Arrakis System
+arrakis_system_initializer = {
+	name = "Arrakis"
+	class = "sc_a"
+	flags = { arrakis_system}
+	usage = custom_empire
+	init_effect = {
+		#if = { #Poenteinal if needed
+			
+		#}
+	}
+	planet = {
+		name = "Canopus"
+		class = "pc_a_star"
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 60
+		has_ring = no
+	}
+
+	planet = {
+		name = "Arrakis"
+		class = "pc_arrakis"
+		orbit_distance = 80
+		orbit_angle = 120
+		size = 28
+		starting_planet = yes
+		has_ring = no
+		entity = "desert_planet"
+		deposit_blockers = none
+		modifiers = none
+		init_effect = {
+			prevent_anomaly = yes
+		}
+		moon = {
+			name = "Hand of God"
+			class = "pc_barren_cold"
+			size = 10
+			orbit_distance = 12
+			orbit_angle = 40
+			has_ring = no
+			entity = "cold_barren_entity"
+		}
+		moon = {
+			name = "Kangaroo Mouse"
+			class = "pc_barren_cold"
+			size = 8
+			orbit_distance = 20
+			orbit_angle = 36
+			has_ring = no
+			entity = "cold_barren_entity"
+		}
+	}
+
+	planet = {
+		name = "Sietch"
+		class = "pc_sietch"
+		init_effect = {
+			prevent_anomaly = yes
+		}
+	}
+}

@@ -1,0 +1,38 @@
+water = {
+    tradable = yes
+    max = 10000
+    market_amount = 10
+    market_price = 100
+    max = 15000
+    deficit_modifier = water_deficit
+    ai_weight = {
+        if = {
+            limit = { 
+                OR = {
+                    has_origin = origin_dune_fremen
+                    has_origin = origin_dune_sietch_tabr_fremen
+                    has_origin = origin_dune_house_atredies
+                    has_origin = origin_dune_house_harkonnen
+                    has_country_flag = own_arrakis
+                }
+            }
+            weight = 2
+        }
+        wieght = 0.5
+    }
+    ai_wants = {
+        if = {
+            limit = { 
+                OR = {
+                    has_origin = origin_dune_fremen
+                    has_origin = origin_dune_sietch_tabr_fremen
+                    has_origin = origin_dune_house_atredies
+                    has_origin = origin_dune_house_harkonnen
+                    has_country_flag = own_arrakis
+                }
+            }
+            base = 5000
+        }
+        base = 500
+    }
+}

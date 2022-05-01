@@ -1,0 +1,74 @@
+####
+#Fremen Defense Army
+########
+fremen_defense_army ={
+	defensive = yes
+	is_pop_spawned = yes
+	health = 1.75
+	damage = 2.0
+	morale = 1.75
+	collateral_damage = 0.0
+	war_exhaustion = 0.0
+	icon = GFX_army_type_defensive
+
+	potential = {
+		from = {
+			NOR = {
+				has_trait = "trait_mechanical"
+				has_trait = "trait_machine_cult"
+				is_sapient = no
+			}
+		}
+		owner = {
+			is_primitive = no
+			OR = {
+				has_origin = origin_dune_fremen
+				has_origin = origin_dune_sietch_tabr_fremen
+			}
+		}
+	}
+}
+
+
+
+defense_army = { #Overwrites Vanilla Default Armies for the Fremen
+	defensive = yes
+	is_pop_spawned = yes
+	health = 1.25
+	damage = 1.50
+	morale = 1.25
+	collateral_damage = 0.0
+	war_exhaustion = 0.0 # No WE from defense armies
+	icon = GFX_army_type_defensive
+
+	potential = {
+		from = {
+			NOR = {
+				has_trait = "trait_mechanical"
+				has_trait = "trait_machine_unit"
+				is_sapient = no
+			}
+		}
+		owner = {
+			is_primitive = no
+			OR = {
+				NOT = { 
+					OR = {
+						has_authority = auth_machine_intelligence
+						has_origin = origin_dune_fremen
+						has_origin = origin_dune_sietch_tabr_fremen
+					}
+					
+				}
+				has_valid_civic = civic_machine_assimilator
+			}
+		}
+	}
+}
+
+
+
+
+####
+#Fremen Assault Armies
+########
