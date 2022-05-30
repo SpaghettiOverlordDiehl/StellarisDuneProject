@@ -1,0 +1,17 @@
+dune_pm_sandworm_arrakis = {
+	spawn_chance = {
+		modifier = {
+			add = 100
+			is_planet_class = "pc_arrakis"
+		}
+	}
+}
+
+dune_pm_sandworm_spice = {
+	spawn_chance = {
+		modifier = {
+			add = 100
+			is_planet_class = "pc_spice_world"
+		}
+	}
+}

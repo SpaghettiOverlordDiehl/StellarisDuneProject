@@ -1,0 +1,102 @@
+#Hostile Sandworms should come about through events, lowering productivity and adding penalties for poor decisions
+
+d_spice_world_hostile_sandworms = {## Ripped from Dune Zro - Made changes - Hostile = blocker. Adds devastation while access.
+	time = 1440
+	icon = d_dust_desert #Need custom Icon for hostile Sandworm
+	is_for_colonizable = yes
+	category = deposit_cat_rare_blocker
+
+	resources = {
+		category = deposit_blockers
+		cost = {
+			energy = 3000
+		}
+	}
+
+	potential = {
+		is_planet_class = pc_spice_world
+	}
+
+	planet_modifier = {
+		planet_max_districts_add = -5
+		pop_environment_tolerance = -0.3
+		job_spicegatherer_add = 1
+		job_spicegatherer_per_pop = 0.1
+		planet_devastation = 0.1
+	}
+	
+	drop_weight = {
+		weight = 1
+	}
+	
+	prerequisites = { "tech_dangerous_wildlife" } #Add custom Sandworm Removal Tech
+}
+
+
+d_arrakis_hostile_sandworms = { #Stronger version of Spice World hostile Sandworms, causes more devastion in return for more jobs and spice
+	time = 1440
+	icon = d_dust_desert # Need custom icon for hostile sandwormds
+	is_for_colonizable = yes
+	category = deposit_cat_rare_blocker
+
+	resources = {
+		category = deposit_blockers
+		cost = {
+			energy = 5000
+		}
+	}
+
+	potential = {
+		is_planet_class = pc_arrakis
+	}
+
+	planet_modifier = {
+		planet_max_districts_add = -5
+		pop_environment_tolerance = -0.4
+		job_spicegatherer_add = 3
+		job_spicegatherer_per_pop = 0.2
+		planet_devastation = 0.2
+	}
+	
+	drop_weight = {
+		weight = 1
+	}
+	
+	prerequisites = { "tech_dangerous_wildlife" } #Add custom Sandworm Removal Tech
+}
+
+#Regular Sandworms = more spice, no devastation but not removable (Except via events/planetary decisions)
+
+d_spice_world_sandworms = {
+	icon = d_dust_desert #need custom icon for passive sandworms
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+
+	potential = {
+		is_planet_class = pc_spice_world
+	}
+
+	planet_modifier = {
+		planet_max_districts_add = -1
+		pop_environment_tolerance = -0.1
+		job_spicegatherer_add = 3
+		job_spicegatherer_per_pop = 0.1
+	}
+}
+
+d_arrakis_sandworms = {
+	icon = d_dust_desert #Need custom Icon for passive sandworms
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+
+	potential = {
+		is_planet_class = pc_arrakis
+	}
+
+	planet_modifier = {
+		planet_max_districts_add = -2
+		pop_environment_tolerance = -0.2
+		job_spicegatherer_add = 5
+		job_spicegatherer_per_pop = 0.2 
+	}
+}
