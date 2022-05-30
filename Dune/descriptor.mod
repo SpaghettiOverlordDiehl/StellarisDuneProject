@@ -14,4 +14,4 @@ tags={
 	"Leaders"
 }
 name="Dune"
-supported_version="3.3.4"
+supported_version="3.4.*"
