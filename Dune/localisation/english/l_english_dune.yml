@@ -1,0 +1,108 @@
+﻿l_english: 
+ ################
+###COMPONENTS###
+################
+
+##HYPER DRIVES##
+HYPER_DRIVE_0: "Slow Hyper Drive"
+HYPER_DRIVE_0_DESC: "With usage of zro for Navigators come unreal prices. Some tend to cut down on expenses so they use this model of Hyper Drive - slower but there is less to be calculated."
+#################
+###RESOLUTIONS###
+#################
+
+
+##CHOAM##
+#choam:0 "CHOAM"
+
+#ESTABLISH CHOAM#
+resolution_category_choam: "CHOAM"
+choam_foundation_resolution: "Establish CHOAM"
+choam_foundation_resolution_desc: "Combine Honnete Over Advanced Mercantiles - a galactic corporation meant to control flow of goods in the Galactic Market."
+
+#MARKET FEE UP AND DOWN#
+resolution_category_choam_market: "CHOAM Market"
+choam_market_standarisation: "CHOAM Standarised Prices"
+choam_market_standarisation_desc: "With standarisation of prices in galaxy the trade is now easier and the new CHOAM sub-branches have more control over the market."
+
+##########
+###JOBS###
+##########
+
+##SPICE GATHERER##
+job_spicegatherer: "Spice Gathering Crew"
+job_spicegatherer_plural: "Spice Gathering Crews"
+job_spicegatherer_desc: "Spice Harverster's operators gather Zro from the surface on the planet. This process inevitably lures worms to it. That's why the crew also consists of spotters and Carryalls that lift the harvesters to safety once a worm has been spotted. The machines require huge alloy upkeep and the lifting doesn't always go as planned."
+mod_job_spicegatherer_add: "$job_spicegatherer_plural$"
+mod_job_spicegatherer_add_short: "\n§G+1§ £spicegatherer£"
+mod_job_spicegatherer_per_pop: "§G+1§! $job_spicegatherer$ per $VALUE$ pops "
+mod_job_spicegatherer_per_pop_short: "\n§G+1§! £job_spicegatherer£ per $VALUE$ £pop£"
+
+###############
+###RESOURCES###
+###############
+
+##ZRO##
+
+mod_country_sr_zro_produces_mult: "Monthly Spice"
+mod_planet_jobs_worker_sr_zro_produces_mult: "Worker Pop Spice Production"
+zro_deficit: "Spice Deficit"
+############
+###ORIGIN###
+############
+
+##ORIGIN ARRAKIS##
+origin_arrakis: "Arrakis"
+origin_arrakis_desc: "Arrakis also known as Dune is the biggest know to man source of Zro - spice melange. The planet with very harsh climate and legendary sandworms makes an impression of a living creature - one that doesn't want to be exploited. Additionally the local inhabitants - Fremen guard their spice-rich territories. Will the empire that tries to colonise this planet get filthy rich or will it fall to it's demise? History will show."
+origin_tooltips_arrakis_effects: "Start with a §H$d_sandworms$§! blocker which makes the planet less habitable but adds $job_spicegatherer$ jobs to it."
+
+
+########################
+###PLANETARY FEATURES###
+########################
+
+##BLOCKERS##
+#SANDWORMS#
+d_spice_world_sandworms: "Sandworms"  #Changed from regular to Spice World
+d_spice_world_sandworms_desc: "Planet is inhabitated by sandworms. These giant creatures are extremely deadly but they are believed to be connected to spice."
+
+
+###############
+###MODIFIERS###
+###############
+
+##CHOAM##
+choam_foundation: "CHOAM Established"
+choam_market_fee_member: "CHOAM Market Fees"
+choam_market_fee_leadership: "CHOAM Market Organisation"
+
+
+##MISC##
+zro_start: "Enable Spice Market"
+zro_start_desc: "Modifier needed to enable trades in spice."
+arrakis_zro_production: "Arrakis' Spice Melange"
+
+##EVENTS##
+
+#dunezro.2 #Removed temporarily, mostly due to not having merged events yet
+# dunezro.2.name: "Arrival at Arrakis"
+# dunezro.2.desc: "We have arrived at Arrakis. The vast deposits of spice melange on the planet will make us rich or attract many enemies. But first we need to decide on how to collect the Zro. Should we try to make Dune the better place by giving out water to population and making deals with smugglers or should we rule as we fit exploiting every possible credit from population? There is always a middle ground - we can just keep the order on the planet as it is."
+# mod_dunezro.2.a: "Building a better tommorow"
+# mod_dunezro.2.b: "Staying traditional"
+# mod_dunezro.2.c: "Exploiting population"
+
+# #dunezro.3
+# dunezro.3.name: "The Fremen"
+# dunezro.3.desc: "We have gained knowledge on nomadic people living on Arrakis. They call themselves Fremen and they live on the deserts. These blue-eyed nomads consume spice with their food. Their culture is focused around religion and survival - the most valuable resource to them is water. \n\nWe currently don't know the exact numbers or the locations of where they live so they might be a really small group. Some of them are married to people living in cities. Should we try contacting them?"
+# dunezro.3.a: "Send an envoy with out best trackers to the deserts."
+# dunezro.3.b: "Ignore them for now."
+
+# #dunezro.4
+
+
+
+# ############
+# ###EVENTS###
+# ############
+# dunezro.2.a: "Try our best to make Arrakis a better place."
+# dunezro.2.b: "Keep everything as it was before."
+# dunezro.2.c: "Exploit the local population."

@@ -1,0 +1,281 @@
+#Initializers for Harkonnens, Atreides, Corrino and others in the furute.
+#Might as well merge it with the file above but since it was specified Arrakis I just created this one - Makro
+
+harkonnen_system = {
+    name = "36 Opiuchi"
+    usage = custom_empire
+    class = sc_trinary_1
+    planet = {
+        name = "Opiuchi B"
+        key = pc_k_star
+        class = star
+        orbit_distance = 5
+        orbit_angle = 240
+        size = { min = 20 max = 25 }
+    }
+    planet = {
+        name = "Opiuchi A"
+        key = pc_k_star
+        class = star
+        orbit_distance = 15
+        orbit_angle = 120
+        size = { min = 25 max = 30 }
+    }
+    planet = {
+        name = "Opiuchi C"
+        key = pc_k_star
+        class = star
+        orbit_distance = 10
+        orbit_angle = 1
+        size = { min = 25 max = 30 }
+    }
+    planet = {
+		name = "Opiuchi I"
+		class = "pc_molten"
+		orbit_distance = 40
+		orbit_angle = 40
+		size = { min = 15 max = 25 }
+	}
+
+	planet = {
+		name = "Opiuchi II"
+		class = "pc_toxic"
+		orbit_distance = 25
+		orbit_angle = 125
+		size = { min = 15 max = 25 }
+	}
+
+	planet = {
+		name = "Giedi Prime"
+		class = "pc_continental"
+		orbit_distance = 25
+		orbit_angle = 120
+		size = 18
+		starting_planet = yes
+		has_ring = no
+		deposit_blockers = none
+		modifiers = none
+
+		init_effect = {
+			prevent_anomaly = yes
+		}
+	}
+}
+#House Atreides Caladan
+atreides_system = {
+    name = "Delta Pavonis"
+    usage = custom_empire
+    class = sc_g
+    planet = {
+        name = "Delta Pavonis"
+        key = pc_g_star
+        class = star
+        orbit_distance = 0
+        size = { min = 30 max = 50 }
+    }
+    planet = {
+		name = "Delta Pavonis I"
+		class = "pc_molten"
+		orbit_distance = 40
+		orbit_angle = 40
+		size = { min = 15 max = 25 }
+	}
+
+	planet = {
+		name = "Delta Pavonis II"
+		class = "pc_toxic"
+		orbit_distance = 25
+		orbit_angle = 125
+		size = { min = 15 max = 25 }
+        init_effect = {
+			prevent_anomaly = yes
+		}
+	}
+
+	planet = {
+		name = "Caladan"
+		class = "pc_oceanic"
+		orbit_distance = 25
+		orbit_angle = 120
+		size = 18
+		starting_planet = yes
+		has_ring = no
+		deposit_blockers = none
+		modifiers = none
+
+		init_effect = {
+			prevent_anomaly = yes
+		}
+	}
+    planet = {
+		name = "Delta Pavonis IV"
+		class = "pc_gas_giant"
+		orbit_distance = 25
+		orbit_angle = 125
+		size = { min = 25 max = 40 }
+        init_effect = {
+			prevent_anomaly = yes
+		}
+	}
+    planet = {
+		name = "Delta Pavonis V"
+		class = "pc_toxic"
+		orbit_distance = 25
+		orbit_angle = 125
+		size = { min = 15 max = 25 }
+        init_effect = {
+			prevent_anomaly = yes
+		}
+	}
+    planet = {
+		name = "Delta Pavonis VI"
+		class = "pc_barren"
+		orbit_distance = 25
+		orbit_angle = 125
+		size = { min = 15 max = 25 }
+        init_effect = {
+			prevent_anomaly = yes
+		}
+	}
+    planet = {
+		name = "Delta Pavonis VII"
+		class = "pc_barren_cold"
+		orbit_distance = 25
+		orbit_angle = 125
+		size = { min = 15 max = 25 }
+        init_effect = {
+			prevent_anomaly = yes
+		}
+	}
+}
+#House Corrino Kaitain
+#tbh I couldn't find much info, only the name of star in XD and that it has 4 moons. In brackets it said it's (Kaitain I) so it might as well be first planet. No info about other planets. Might add them later.
+#on the other hand wikipedia gave information that it is a binary system with 2 A-class stars. ~ Makro
+corrino_system = {
+    name = "Alpha Piscium"
+    usage = custom_empire
+    class = sc_binary_9
+    planet = {
+        name = "Alpha Piscium A"
+        key = pc_a_star
+        class = star
+        orbit_distance = 5
+		orbit_angle = 180
+        size = { min = 30 max = 40 }
+    }
+	planet = {
+        name = "Alpha Piscium B"
+        key = pc_a_star
+        class = star
+        orbit_distance = 5
+		orbit_angle = 0
+        size = { min = 30 max = 40 }
+	}
+	planet = {
+		name = "Kaitain"
+		class = "pc_gaia"
+		orbit_distance = 25
+		orbit_angle = 120
+		size = 18
+		starting_planet = yes
+		has_ring = yes
+		deposit_blockers = none
+		modifiers = none
+
+		init_effect = {
+			prevent_anomaly = yes
+		}
+	}
+}
+#House Corrino Salusa Secundus
+salusa_system = {
+    name = "Gamma Piscium"
+    #no usage - we spawn it through event
+    class = sc_g
+	flags = { salusa_system }
+    planet = {
+        name = "Gamma Piscium"
+        key = pc_g_star
+        class = star
+        orbit_distance = 0
+        size = { min = 30 max = 50 }
+    }
+	planet = {
+		name = "Gamma Piscium I"
+		class = "pc_molten"
+		orbit_distance = 25
+		orbit_angle = 125
+		size = { min = 15 max = 25 }
+        init_effect = {
+			prevent_anomaly = yes
+		}
+	}
+	planet = {
+		name = "Gamma Piscium II"
+		class = "pc_barren"
+		orbit_distance = 25
+		orbit_angle = 25
+		size = { min = 15 max = 25 }
+        init_effect = {
+			prevent_anomaly = yes
+		}
+	}
+	planet = {
+		name = "Salusa Secundus"
+		class = "pc_nuked"
+		orbit_distance = 25
+		orbit_angle = 120
+		size = 18
+		starting_planet = yes
+
+		flags = { salusa }
+		has_ring = no
+		deposit_blockers = none
+		modifiers = none
+
+		init_effect = {
+			prevent_anomaly = yes
+		}
+	}
+	planet = {
+		name = "Gamma Piscium IV"
+		class = "pc_barren"
+		orbit_distance = 25
+		orbit_angle = 25
+		size = { min = 15 max = 25 }
+        init_effect = {
+			prevent_anomaly = yes
+		}
+	}
+	planet = {
+		name = "Gamma Piscium V"
+		class = "pc_gas_giant"
+		orbit_distance = 25
+		orbit_angle = 25
+		size = { min = 25 max = 30 }
+        init_effect = {
+			prevent_anomaly = yes
+		}
+	}
+	planet = {
+		name = "Gamma Piscium VI"
+		class = "pc_barren"
+		orbit_distance = 25
+		orbit_angle = 25
+		size = { min = 15 max = 25 }
+        init_effect = {
+			prevent_anomaly = yes
+		}
+	}
+	planet = {
+		name = "Gamma Piscium VII"
+		class = "pc_barren_cold"
+		orbit_distance = 25
+		orbit_angle = 25
+		size = { min = 15 max = 25 }
+        init_effect = {
+			prevent_anomaly = yes
+		}
+	}
+}
+

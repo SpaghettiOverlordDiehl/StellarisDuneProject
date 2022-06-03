@@ -1,0 +1,19 @@
+arrakis_sandworms = {# increase of 400% to Spice production. add 10 passive Spice income that doesn't need job
+	planet_jobs_zro_produces_mult = 4
+	produces = {
+		sr_zro = 10
+	}
+
+	icon = "gfx/interface/icons/planet_modifiers/pm_hazardous_weather.dds"
+	icon_frame = 3
+}
+
+spice_world_sandword = { # 200% increase spice production, add 5 passive Spice income
+	planet_jobs_zro_produces_mult = 2
+	produces = {
+		sr_zro = 5
+	}
+
+	icon = "gfx/interface/icons/planet_modifiers/pm_hazardous_weather.dds"
+	icon_frame = 3
+}

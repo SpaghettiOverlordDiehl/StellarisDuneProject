@@ -1,0 +1,87 @@
+namespace = dune_game_start
+
+#Gives access to zro and gives every empire 100 starting zro
+event = {
+	id = dune_game_start.1
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		every_playable_country = {
+			add_resource = {
+				sr_zro = 100
+			}
+			add_modifier = {
+				modifier = "zro_start"
+			}
+			#country_event = { id = dunezro_game_start.3 days = 61 }
+		}
+	}
+}
+
+
+#Spawn Salusa Secundus system
+event = {
+	id = dune_game_start.2
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		every_playable_country = {
+			limit = { has_origin = origin_dune_house_corrino }
+			save_event_target_as = corrino_country
+			random_system_within_border = {
+				save_event_target_as = salusa_secundus_system
+			}
+			event_target:salusa_secundus_system = {
+				spawn_system = {
+					min_distance = 10
+					max_distance = 15
+					max_jumps = 0
+					initializer = "salusa_system"
+				}
+			}
+		}
+	}
+}
+
+#claim Salusa Secundus system and create colony
+event = {
+	id = dune_game_start.3
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		every_playable_country = {
+			limit = { has_origin = origin_dune_house_corrino }
+			save_event_target_as = corrino_country
+			every_system = {
+				limit = { has_star_flag = salusa_system }
+				create_starbase = {
+					size = "starbase_outpost"
+					owner = event_target:corrino_country
+				}
+				every_system_planet = {
+					limit = { has_planet_flag = salusa }
+					create_colony = {
+						owner = event_target:corrino_country
+						species = owner_species
+					}
+					planet_event = { id = dune_game_start.4 }
+				}
+			}
+		}
+	}
+}
+#sets modifiers and sorts stuff out for salusa secundus
+planet_event = {
+	id = dune_game_start.4
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		add_modifier = {
+			modifier = "penal_colony"
+			clear_on_owner_change = yes
+		}
+		set_name = "Salusa Secundus"
+	}
+}
+
+

@@ -1,0 +1,11 @@
+water_deficit = {
+	planetary_jobs_produces_mult = -0.25
+	country_war_exhaustion_mult = 0.50
+}
+
+spice_deficit = {#Imported, Changed values, maybe remove the Negative Happiness, but canonically spice = shorter lives, probably keep that. Ship Evasion is iffy, could say "lack of prescience" or just remove it, just might make it even harsher
+	ship_windup_mult = 5
+	pop_happiness_mult = -0.5
+	ship_evasion_mult = -0.5
+	leader_age = -30
+}

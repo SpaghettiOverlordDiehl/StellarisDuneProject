@@ -1,0 +1,33 @@
+spicegatherer = {
+	category = worker
+	condition_string = WORKER_JOB_TRIGGER
+	building_icon = building_mineral_purification_plant
+	clothes_texture_index = 3
+	icon = spicegatherer #Needs an actual GFX icon rather than just a zro icon - Fix later
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_worker_job
+
+	resources = {
+		category = planet_sr_miners
+		produces = {
+			sr_zro = 3
+		}
+		upkeep = {
+			alloys = 5
+		}
+	}
+
+	weight = {
+		weight = @worker_prio_job_weight
+		modifier = {
+			factor = 1.5
+			has_trait = trait_necrophage #Perhaps make a "Spice addicted" trait? Gives slightly increased travel speed and leader lifespan in return for a 5% zro upkeep increase?
+			#well I don't think this fits here, I believe this is a space to prioritize who works here, like for machines you have perks for energy production - they will be working there instead of working in mining if we set the energy perk there.
+		}
+	}
+}

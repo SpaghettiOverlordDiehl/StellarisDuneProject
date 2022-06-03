@@ -1,0 +1,243 @@
+###
+# Standard Spice World - Just a Desert world renamed basically, makes it easier for people to find Spice
+####
+pc_spice_world = {
+	entity = "desert_planet"
+	icon = GFX_planet_type_desert
+	climate = "dry"
+	
+	entity_scale = @planet_standard_scale
+
+	atmosphere_color		= hsv { 0.50 0.2 0.8 }		#DONE
+	atmosphere_intensity	= 1.0
+	atmosphere_width		= 0.5
+
+	min_distance_from_sun = @habitable_min_distance
+	max_distance_from_sun = @habitable_max_distance
+
+	city_color_lut = "gfx/portraits/misc/colorcorrection_desert.dds"
+
+	spawn_odds = 1
+	extra_orbit_size = 0
+	extra_planet_count = 0
+
+	chance_of_ring = 0.2
+
+	planet_size = { min = @habitable_planet_min_size max = @habitable_planet_max_size }
+	moon_size = { min = @habitable_moon_min_size max = @habitable_moon_max_size }
+
+	production_spawn_chance = 0.4
+
+	colonizable = yes
+	district_set = standard
+	uses_alternative_skies_for_moons = no
+
+	carry_cap_per_free_district = @carry_cap_normal
+}
+
+#####
+# Arrakis - Again, basically desert world Renamed.
+#######
+
+pc_arrakis = {
+	entity = "desert_planet"
+	icon = GFX_planet_type_desert
+	climate = "dry"
+	
+	entity_scale = @planet_standard_scale
+
+	atmosphere_color		= hsv { 0.50 0.2 0.8 }		#DONE
+	atmosphere_intensity	= 1.0
+	atmosphere_width		= 0.5
+
+	min_distance_from_sun = @habitable_min_distance
+	max_distance_from_sun = @habitable_max_distance
+
+	city_color_lut = "gfx/portraits/misc/colorcorrection_desert.dds"
+
+	spawn_odds = 0
+	extra_orbit_size = 0
+	extra_planet_count = 0
+
+	chance_of_ring = 0
+
+	planet_size = {min =28 max = 28}
+	moon_size = { min = 5 max = 6 }
+
+	colonizable = yes
+	district_set = standard
+	uses_alternative_skies_for_moons = no
+
+	carry_cap_per_free_district = @carry_cap_normal
+}
+
+##
+#Sietches/Cities
+####
+
+pc_sietch = {
+	entity = ""
+	icon = GFX_planet_type_desert
+	climate = "dry"
+
+	atmosphere_color		= hsv { 0.50 0.2 0.8 }		#DONE
+	atmosphere_intensity	= 1.0
+	atmosphere_width		= 0.5
+
+	min_distance_from_sun = 0
+	max_distance_from_sun = 0
+
+	city_color_lut = "gfx/portraits/misc/colorcorrection_desert.dds"
+
+	spawn_odds = 0
+	extra_orbit_size = 0
+	extra_planet_count = 0
+
+	chance_of_ring = 0
+
+	planet_size = {min =10  max = 15}
+
+	colonizable = yes
+	district_set = sietch
+	uses_alternative_skies_for_moons = no
+
+	carry_cap_per_free_district = @carry_cap_normal
+}
+
+pc_arrakeen = {
+	entity = ""
+	icon = GFX_planet_type_desert
+	climate = "dry"
+
+	atmosphere_color		= hsv { 0.50 0.2 0.8 }		#DONE
+	atmosphere_intensity	= 1.0
+	atmosphere_width		= 0.5
+
+	min_distance_from_sun = 0
+	max_distance_from_sun = 0
+
+	city_color_lut = "gfx/portraits/misc/colorcorrection_desert.dds"
+
+	spawn_odds = 0
+	extra_orbit_size = 0
+	extra_planet_count = 0
+
+	chance_of_ring = 0
+
+	planet_size = {min = 10 max = 15}
+
+	colonizable = yes
+	district_set = standard
+	uses_alternative_skies_for_moons = no
+
+	carry_cap_per_free_district = @carry_cap_normal
+}
+
+pc_carthag = { 
+	entity = ""
+	icon = GFX_planet_type_desert
+	climate = "dry"
+
+	atmosphere_color		= hsv { 0.50 0.2 0.8 }		#DONE
+	atmosphere_intensity	= 1.0
+	atmosphere_width		= 0.5
+
+	min_distance_from_sun = 0
+	max_distance_from_sun = 0
+
+	city_color_lut = "gfx/portraits/misc/colorcorrection_desert.dds"
+
+	spawn_odds = 0
+	extra_orbit_size = 0
+	extra_planet_count = 0
+
+	chance_of_ring = 0
+
+	planet_size = {min = 10 max = 15}
+
+	colonizable = yes
+	district_set = standard
+	uses_alternative_skies_for_moons = no
+
+	carry_cap_per_free_district = @carry_cap_normal
+}
+
+
+
+
+###
+#Random List overrides to add new planet types
+###
+random_list = {
+	name = "rl_all_planets"
+	planets = {
+		"pc_continental"
+		"pc_desert"
+		"pc_tropical"
+		"pc_arid"
+		"pc_ocean"
+		"pc_tundra"
+		"pc_arctic"
+		"pc_alpine"
+		"pc_savannah"
+		"pc_asteroid"
+		"pc_gas_giant"
+		"pc_molten"
+		"pc_barren"
+		"pc_barren_cold"
+		"pc_toxic"
+		"pc_frozen"
+		"pc_nuked"
+		"pc_ai"
+		"pc_infested"
+		"pc_shielded"
+		"pc_gaia"
+		"pc_shrouded"
+		"pc_broken"
+		"pc_spice_world"
+		"pc_arrakis"
+		"pc_sietch"
+		"pc_arrakeen"
+		"pc_carthag"
+	}
+}
+
+random_list = {
+	name = "rl_unhabitable_planets"
+	planets = {
+		"pc_gas_giant"
+		"pc_molten"
+		"pc_barren"
+		"pc_barren_cold"
+		"pc_toxic"
+		"pc_frozen"
+	}
+}
+
+random_list = {
+	name = "rl_habitable_special"
+	planets = {
+		"pc_gaia"
+		"pc_nuked"
+		"pc_arrakis"
+		"pc_sietch"
+		"pc_arrakeen"
+		"pc_carthag"
+	}
+}
+
+random_list = {
+	name = "rl_habitable_normal"
+	planets = {
+		"pc_desert"
+		"pc_tropical"
+		"pc_arid"
+		"pc_ocean"
+		"pc_tundra"
+		"pc_arctic"
+		"pc_continental"
+		"pc_alpine"
+		"pc_savannah"
+		"pc_spice_world"
+	}
+}
